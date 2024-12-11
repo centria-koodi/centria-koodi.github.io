@@ -1,0 +1,91 @@
+<!--Ilmoitetaan selaimelle tieto dokumentista ja sen kieli - HTML5 tyyliin-->
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <!--Dokumentin nimi ja metatiedot sekä linkitykset .css tiedostoon-->
+    <title>Parhiala Mekanik - Asiakkaiden kokemuksia</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Markus Parhiala">
+    <meta name="description" content="Parhiala Mekanik yrityksen etusivu - Metallityöntekijä ja autonkorjaus mekanikko">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./media/Logo_icon.png">
+    <link rel ="stylesheet" href="style.css">
+</head>
+
+<!--Käyttäjälle näkyvä osio alkaa tästä-->
+<body>
+<div class="container">
+    <header class="header">
+        <div class="logo">
+            <img src="./media/Logo_Läpinäkyvä_valkoinen_pieni.png" alt="Parhiala Mekanik logo teksti" style="width: 768px; height: 239px;">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                    <li><a href="tietoa.html">Tietoa meistä</a></li>
+                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+                    <li><a href="kokemuksia.html">Asiakkaiden kokemuksia</a></li>
+
+                </ul>
+
+            </nav>
+    </header>
+    <main class="content">
+        <h1 class="main-title">Asiakkaiden kokemuksia</h1>
+        <section class="grid-reviews">
+            <!-- Asiakaspalautteet -->
+            <div class="review-item">
+                <h2>Sanna K.</h2>
+                <p>"Auto saatiin kuntoon nopeasti ja ammattitaidolla! Hyvä palvelu ja ystävällinen henkilökunta."</p>
+            </div>
+
+            <div class="review-item">
+                <h2>Jari M.</h2>
+                <p>"Metallityöt olivat huippuluokkaa. Toteutettiin juuri meidän tarpeisiin sopiva rakenne. Kiitos!"</p>
+            </div>
+
+            <!-- Video-asiakaskokemus -->
+            <div class="review-video">
+                <video controls height="720" width="1366" muted autoplay preload="auto">
+                    <source src="./media/sport-car-vid.mp4" type="video/mp4">
+                    
+                </video>
+                <p>"Punaisen urheiluautoni maalaus ylitti kaikki odotukseni! Väri on täydellinen ja viimeistely todella upea." - Antti L.</p>
+            </div>
+            <!-- Asiakaspalautteet -->
+            <div class="review-item">
+                <h2>Laura P.</h2>
+                <p>"Alihankintapalveluista saatiin erinomainen tuki yrityksemme projekteihin. Suosittelen lämpimästi."</p>
+            </div>
+
+            <div class="review-item">
+                <h2>Petri R.</h2>
+                <p>"Aikataulut pitivät ja työnjälki oli erinomaista. Harvoin löytää näin luotettavaa palvelua."</p>
+            </div>
+
+            <div class="review-item">
+                <h2>Anna V.</h2>
+                <p>"Työkalukorjaukset tehtiin todella ammattimaisesti. Kiitokset vielä Parhialan tiimille!"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Markus Parhiala, Kaikki oikeudet pidätetään</p>
+
+    </footer>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
