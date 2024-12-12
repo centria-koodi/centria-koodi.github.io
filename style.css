@@ -264,8 +264,7 @@
 /* Tietoa meistä sivun määrityksiä*/
 
 .content-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;   
 }
 
@@ -275,7 +274,7 @@
     gap: 20px;
     align-items: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 750px;
 }
 
 .text-box {
@@ -692,12 +691,14 @@ form button:hover {
     }
 
     .text-box {
-        margin: 0 0; /* Keskittää tekstilohkon */
+        width: 100%;
+        margin: 0 auto; /* Keskittää tekstilohkon */
         text-align: center; /* Keskittää tekstin lohkossa */
     }
 
     .image-box {
-        margin: 0 0; /* Keskittää kuvan */
+        width: 60%;
+        margin: 0 auto; /* Keskittää kuvan */
         text-align: center;
     }
 
