@@ -263,6 +263,12 @@
 
 /* Tietoa meistä sivun määrityksiä*/
 
+.content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -403,6 +409,7 @@
 
 .content-form {
     display: 'grid';
+    
 
 
 }
