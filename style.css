@@ -36,7 +36,7 @@
 }
 
 .navigation {
-    align-items: end;
+    align-items: center;
     position: absolute; /*Asettaa navigoinnin oikeaan yläkulmaan*/
     right: 25px; /*Etäisyys oikealta*/
 
@@ -47,7 +47,7 @@
 .navigation ul {
     display: flex;
     list-style: none;
-        padding: 0;
+    padding: 0;
     margin: 0;
     text-align: center; /* Keskittää navigaation linkit */
 
