@@ -678,6 +678,26 @@ form button:hover {
     .services-container {
         gap: 10px;
     }
+    .info-grid {
+        grid-template-columns: 1fr; /* Yksi sarake mobiilissa */
+        text-align: center; /* Keskittää tekstisisällön */
+    }
+
+    .text-box {
+        margin: 0 auto; /* Keskittää tekstilohkon */
+        text-align: center; /* Keskittää tekstin lohkossa */
+        padding: 20px;
+    }
+
+    .image-box {
+        margin: 0 auto; /* Keskittää kuvan */
+        text-align: center;
+    }
+
+    .image-box img {
+        width: 90%; /* Skaalaa kuvaa mobiilissa, jos se on liian suuri */
+        height: auto; /* Säilyttää kuvasuhteen */
+    }
 
     .gallery-pic {
         flex-direction: column;
