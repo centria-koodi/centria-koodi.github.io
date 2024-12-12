@@ -612,25 +612,36 @@ form button:hover {
 
     .info-grid {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 15px; /* Lisää tilaa elementtien väliin */
+        padding: 0 10px; /* Lisää sisennystä sivun reunoille */
         
     }
 
     .text-box {
-        text-align: center;
         margin: 0 auto;
         padding: 20px;
+        max-width: 100%; /* Skaalaa tekstilohko näyttöön */
+        text-align: center; /* Keskittää tekstin */
+        word-wrap: break-word; /* Estää pitkät sanat rikkomasta layoutia */
     
     }
 
     .image-box {
         margin: 0 auto; /* Keskittää kuvan */
         text-align: center;
+        width: 100%; /* Skaalaa kuvan kontti näyttöön */
     }
 
     .image-box img {
-        width: 70%; /* Skaalaa kuvaa mobiilissa, jos se on liian suuri */
+        width: 90%; /* Skaalaa kuva mobiilissa */
+        height: auto; /* Säilyttää kuvasuhteen */
+        max-width: 100%; /* Varmistaa, että kuva ei ylitä konttia */
 
+
+    }
+    .gallery-link {
+        margin: 20px auto;
+        width: 90%; /* Skaalaa linkkiosio mobiiliin */
     }
 
 
