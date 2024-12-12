@@ -36,6 +36,7 @@
 }
 
 .navigation {
+    display: flex;
     align-items: end;
     position: absolute; /*Asettaa navigoinnin oikeaan yläkulmaan*/
     right: 25px; /*Etäisyys oikealta*/
@@ -45,12 +46,24 @@
 
 
 .navigation ul {
-    display: flex;
-    list-style: none;
+/*    display: flex; */
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Keskittää navigaation linkit */
+    display: none; /* Piilota navigaatio oletuksena */
+    flex-direction: column;
+    background-color: rgb(44, 42, 42); /* Taustaväri navigaatiolle */
+    position: absolute;
+    top: 50px; /* Navigaation sijainti hamburger-ikonin alapuolella */
+    left: 0;
+    width: 100%; /* Vie koko leveys mobiilissa */
+    z-index: 9;
 
 }
 
 .navigation ul li {
+    margin: 10px 0; /* Lisää väliä linkkien väliin */
     margin-left: 25px;
 
 }
@@ -72,11 +85,18 @@
 .menu-checkbox {
     display: none; 
 }
+.menu-checkbox:checked  {
+    display: flex; /* Näytä navigaatio, kun checkbox on valittu */
+}
 
 .menu-icon {
-    display: none; 
-    font-size: 1.5rem;
+    display: block; /* Näyttää hamburger-ikonin pienillä näytöillä */
+    font-size: 1.5rem; /* Säädä ikonin kokoa tarvittaessa */
     cursor: pointer;
+    text-align: center; /* Keskittää ikonin tekstin */
+    margin: 0 auto; /* Keskittää vaakasuunnassa */
+    position: relative; /* Varmistaa, että ikoni ei siirry väärään paikkaan */
+    z-index: 10; /* Pitää menun muiden elementtien päällä */
 }
 
 
