@@ -685,13 +685,12 @@ form button:hover {
     }
 
     .text-box {
-        margin: 0 auto; /* Keskittää tekstilohkon */
+        margin: 0 0; /* Keskittää tekstilohkon */
         text-align: center; /* Keskittää tekstin lohkossa */
-        padding: 20px;
     }
 
     .image-box {
-        margin: 0 auto; /* Keskittää kuvan */
+        margin: 0 0; /* Keskittää kuvan */
         text-align: center;
     }
 
