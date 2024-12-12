@@ -606,14 +606,25 @@ form button:hover {
     .info-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        
     }
 
     .text-box {
         text-align: center;
         margin: 0 auto;
+        padding: 20px;
+    
     }
+
+    .image-box {
+        margin: 0 auto; /* Keskittää kuvan */
+        text-align: center;
+    }
+
     .image-box img {
-        margin: 0 auto;
+        width: 90%; /* Skaalaa kuvaa mobiilissa, jos se on liian suuri */
+        height: auto; /* Säilyttää kuvasuhteen */
+
     }
 
 
