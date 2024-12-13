@@ -729,9 +729,15 @@ form button:hover {
         width: 100%; /*skaalaa kuvaa mobiilissa, jos se on liian suuri */
     }
 
-    .gallery-pic {
+    .gallery-grid {
         flex-direction: column;
     }
+   
+   .gallery-pic {
+       justify-content: center;
+       margin: 0 auto;
+       width: 100%;
+   }
 
     .gallery-link .button {
         font-size: 0.9rem;
@@ -744,6 +750,7 @@ form button:hover {
     }
 
     .contact-info, form, .map-container {
+        margin: 0 auto;
         max-width: 100%;
         padding: 10px;
     }
