@@ -265,10 +265,6 @@
     color: rgb(255, 92, 33);
 }
 
-.text-box p {
-
-}
-
 .image-box img {
     width: 100%;
     height: auto;
@@ -627,21 +623,12 @@ form button:hover {
 
 /* Responsiivisuus mobiililaitteille (puhelimet) */
 @media (max-width: 480px) {
-    p, label, input, button {
-   
-    }
-    .menu-icon {
- 
-    }
 
     .footer {
+        text-align: center;
         display: flex;
         justify-content: center;
         margin: 0 auto;
-    }
-
-    .main-title {
-
     }
 
     .services-container {
