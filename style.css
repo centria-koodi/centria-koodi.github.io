@@ -730,22 +730,27 @@ form button:hover {
     }
 
     .gallery-grid {
-        flex-direction: column;
-        width: 100%; /* Täysi leveys kontille */
-        margin: 0 auto; /* Keskittää kontit */
+        flex-direction: column; /* Kuvalohkot allekkain mobiilissa */
+        width: 100%; /* Vie koko mobiilin leveys */
+        margin: 0 auto; /* Keskittää lohkon */
+        padding: 0 10px; /* Lisää tilaa reunoille */
     }
-    
+
     .gallery-pic {
         justify-content: center;
-        margin: 0 auto;
-        width: 100%; /* Lohkot vievät koko leveyden */
+        margin: 0 auto; /* Keskittää kuvalohkon */
+        width: 100%; /* Skaalaa kuvalohko täyttämään tilan */
+        max-width: 480px; /* Rajoittaa kuvalohkon enimmäisleveyden */
+        padding: 10px 0; /* Luo tilaa ylä- ja alapuolelle */
     }
-    
+
     .gallery-pic img {
-        width: 100%; /* Skaalaa kuvat täyttämään koko lohkon */
-        height: auto; /* Säilyttää oikean suhteen */
-        max-width: none; /* Poistetaan rajoittava max-width */
+        width: 100%; /* Skaalaa kuva täyttämään kuvalohkon */
+        height: auto; /* Säilyttää oikean kuvasuhteen */
+        max-width: 100%; /* Estää kuvan ylittämistä lohkon rajojen yli */
+        border-radius: 10px; /* Lisää pehmeyttä kuvan reunoihin */
     }
+
     .gallery-link .button {
         font-size: 0.9rem;
         padding: 10px 15px;
