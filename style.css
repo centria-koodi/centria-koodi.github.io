@@ -634,6 +634,12 @@ form button:hover {
  
     }
 
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
     .main-title {
 
     }
