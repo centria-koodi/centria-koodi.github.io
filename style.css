@@ -731,14 +731,21 @@ form button:hover {
 
     .gallery-grid {
         flex-direction: column;
+        width: 100%; /* Täysi leveys kontille */
+        margin: 0 auto; /* Keskittää kontit */
     }
-   
-   .gallery-pic {
-       justify-content: center;
-       margin: 0 auto;
-       width: 100%;
-   }
-
+    
+    .gallery-pic {
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%; /* Lohkot vievät koko leveyden */
+    }
+    
+    .gallery-pic img {
+        width: 100%; /* Skaalaa kuvat täyttämään koko lohkon */
+        height: auto; /* Säilyttää oikean suhteen */
+        max-width: none; /* Poistetaan rajoittava max-width */
+    }
     .gallery-link .button {
         font-size: 0.9rem;
         padding: 10px 15px;
@@ -756,10 +763,11 @@ form button:hover {
     }
 
     .map-container iframe {
-        justify-content: center;
+        display: block; /* Varmistaa, että iframe keskitetään */
         margin: 10px auto;
-        width: 70%;
-
+        width: 90%; /* Skaalaa mobiilissa paremmin */
+        max-width: 750px; /* Estää liian suuren leveyden */
+        height: auto; /* Säilyttää oikean suhteen */
     }
 
     .grid-reviews {
