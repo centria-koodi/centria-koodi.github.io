@@ -654,15 +654,11 @@ form button:hover {
     
     .gallery-pic {
         justify-content: center;
-        margin: 0 auto;
-        width: 100%;
     }
 
 
     .gallery-pic img {
-        width: 90%;
-        height: auto; /* Säilyttää kuvasuhteen */
-        max-width: 100%; /* Varmistaa, että kuva ei ylitä konttia */
+        max-width: 100%;
     }
 
 
@@ -729,26 +725,8 @@ form button:hover {
         width: 100%; /*skaalaa kuvaa mobiilissa, jos se on liian suuri */
     }
 
-    .gallery-grid {
-        flex-direction: column; /* Kuvalohkot allekkain mobiilissa */
-        width: 100%; /* Vie koko mobiilin leveys */
-        margin: 0 auto; /* Keskittää lohkon */
-        padding: 0 10px; /* Lisää tilaa reunoille */
-    }
-
     .gallery-pic {
-        justify-content: center;
-        margin: 0 auto; /* Keskittää kuvalohkon */
-        width: 100%; /* Skaalaa kuvalohko täyttämään tilan */
-        max-width: 480px; /* Rajoittaa kuvalohkon enimmäisleveyden */
-        padding: 10px 0; /* Luo tilaa ylä- ja alapuolelle */
-    }
-
-    .gallery-pic img {
-        width: 100%; /* Skaalaa kuva täyttämään kuvalohkon */
-        height: auto; /* Säilyttää oikean kuvasuhteen */
-        max-width: 100%; /* Estää kuvan ylittämistä lohkon rajojen yli */
-        border-radius: 10px; /* Lisää pehmeyttä kuvan reunoihin */
+        flex-direction: column;
     }
 
     .gallery-link .button {
@@ -762,17 +740,8 @@ form button:hover {
     }
 
     .contact-info, form, .map-container {
-        margin: 0 auto;
         max-width: 100%;
         padding: 10px;
-    }
-
-    .map-container iframe {
-        display: block; /* Varmistaa, että iframe keskitetään */
-        margin: 10px auto;
-        width: 90%; /* Skaalaa mobiilissa paremmin */
-        max-width: 750px; /* Estää liian suuren leveyden */
-        height: auto; /* Säilyttää oikean suhteen */
     }
 
     .grid-reviews {
