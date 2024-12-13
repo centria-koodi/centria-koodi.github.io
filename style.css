@@ -6,11 +6,7 @@
 
 }
 
-/*Tekstin yleiset tyylit*/
-
-
-
-/*Luokka määritykset*/
+/*Joka sivua koskevat asetukset*/
 .container {
     display: flex;
     flex-direction: column;
@@ -40,17 +36,14 @@
     position: absolute; /*Asettaa navigoinnin oikeaan yläkulmaan*/
     right: 25px; /*Etäisyys oikealta*/
 
-
 }
-
 
 .navigation ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Keskittää navigaation linkit */
-
+    text-align: center; 
 }
 
 .navigation ul li {
@@ -70,44 +63,6 @@
     color:rgb(111, 111, 224)
 }
 
-
-/* Hamburger-menu ja valikko pienillä näytöillä */
-.menu-checkbox {
-    display: none; 
-}
-
-.menu-icon {
-    display: none; 
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center; /* Keskittää ikonin tekstin */
-    margin: 0 auto; /* Keskittää vaakasuunnassa */
-    position: relative; /* Varmistaa, että ikoni ei siirry väärään paikkaan */
-    z-index: 10; /* Pitää menun muiden elementtien päällä */
-}
-
-
-/* Breadcrumb-tyylit */
-.breadcrumb {
-    margin: 20px 0;
-    font-size: 0.9rem;
-    color: #fff;
-    text-align: left;
-    width: 100%; 
-    padding-left: 40px; 
-}
-
-.breadcrumb a {
-    color: rgb(255, 92, 33);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-
-
 .content {
     display: flex;
     flex-direction: column;
@@ -118,10 +73,8 @@
     margin-right: 8%;
 }
 
-
 .main-title {
     text-align: center; 
-    font-size: 3rem;
     color: rgb(255, 92, 33);
     text-transform: uppercase; /* Tekstin kaikki kirjaimet isoiksi */
     letter-spacing: 2px; /* Lisää väliä kirjainten väliin */
@@ -148,10 +101,43 @@
 }
 
 
+/* Breadcrumb-tyylit */
+.breadcrumb {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: left;
+    width: 100%; 
+    padding-left: 40px; 
+}
+
+.breadcrumb a {
+    color: rgb(255, 92, 33);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hamburger-menu ja valikko pienillä näytöillä */
+.menu-checkbox {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+    text-align: center; 
+    margin: 0 auto; 
+    position: relative;
+    z-index: 10; 
+}
+
 
 /*Etusivun määrityksiä*/
 .content-index {
-
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -165,31 +151,24 @@
     text-align: center;
 }
 
-
-.content-index-wrapper {
-    
+.content-index-wrapper {    
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
 }
 
-
 .content-index-intro {
-
     background: rgba(0, 0, 0, 0.6);
     padding: 20px 40px;
     border-radius: 10px;
 }
 
 .content-index-intro h1 {
-    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .content-index-intro p {
-    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -203,7 +182,6 @@
 .contact-button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2rem; 
     font-weight: bold; 
     color: white;
     background-color: rgb(255, 92, 33);
@@ -220,14 +198,13 @@
 
 
 /*Palvelut sivun määrityksiä*/ 
-
 .services-container {
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap; /* Rivitys pienemmillä näytöillä */
     gap: 20px; 
     width: 100%;
-    max-width: 1200px; /* Asettaa sisällön maksimileveyden */
+    max-width: 1200px; 
     margin: 0 auto; 
     padding: 20px; 
 }
@@ -240,29 +217,25 @@
     border-radius: 10px; 
     text-align: center; 
     color: #f0f0f0; 
-    font-family: Arial, sans-serif; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efektit */
 }
 
 .service h2 {
-    font-size: 1.5rem; 
     margin-bottom: 10px; 
     color: rgb(255, 134, 91); 
 }
 
 .service p {
-    font-size: 1rem; 
     line-height: 1.5;
 }
 
 .service:hover {
-    transform: translateY(-10px); /* Nosto hoverilla */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Varjostus hoverilla */
+    transform: translateY(-10px); /* Nosto efekti */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
 }
 
 
 /* Tietoa meistä sivun määrityksiä*/
-
 .content-info {
     display: grid;
     align-items: center;   
@@ -286,18 +259,15 @@
     text-align: left;
 }
 
-
 .text-box h2 {
     text-align: center;
-    font-size: 2rem;
     margin-bottom: 10px;
     color: rgb(255, 92, 33);
 }
 
 .text-box p {
-    font-size: 1rem;
-}
 
+}
 
 .image-box img {
     width: 100%;
@@ -305,6 +275,7 @@
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Galleria-linkki */
 .gallery-link {
@@ -318,13 +289,11 @@
 }
 
 .gallery-link h2 {
-    font-size: 1.8rem;
     color: rgb(255, 92, 33);
 }
 
 .gallery-link p {
     color: #fff;
-    font-size: 1.1rem;
     margin: 10px 0;
 }
 
@@ -335,7 +304,6 @@
     background-color: rgb(255, 92, 33);
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
@@ -368,7 +336,6 @@
     border: 2px solid #ffa500; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
 }
 
 .gallery-pic img {
@@ -379,9 +346,8 @@
 }
 
 
-
+/*  Yhteystiedot sivun määrityksiä*/
 .text, .contact-info p {
-    font-size: 1.2rem;
     line-height: 1.6;
     color: #eee;
     background-color: rgba(0, 0, 0, 0.5);
@@ -390,7 +356,6 @@
 }
 
 .contact-info, .contact-form h2 {
-    font-size: 2rem;
     color: rgb(255, 92, 33);
     text-align: center;
     margin-bottom: 20px;
@@ -401,16 +366,9 @@
     border-radius: 8px;
 }
 
-
-
-
 /*Lomakkeen määritykset*/
-
 .content-form {
     display: 'grid';
-    
-
-
 }
 
 .text {
@@ -430,7 +388,6 @@
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
 
 .contact-form {
     max-width: 750px;
@@ -488,7 +445,6 @@ form button:hover {
     background-color: rgb(255, 134, 91);
 }
 
-
 /*Google Maps määritykset*/
 .map-container {
     max-width: 750px;
@@ -499,7 +455,6 @@ form button:hover {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 
 /* Asiakkaiden kokemuksia sivun määritteyt - GRID asettelu*/
@@ -540,11 +495,8 @@ form button:hover {
 }
 
 
-
-
 /* Responsiivisuus pienillä näytöillä */
 @media (max-width: 768px) {
-
     .header {
         flex-direction: column;
         align-items: center;
@@ -560,27 +512,25 @@ form button:hover {
         flex-direction: column; 
         background-color: rgb(44, 42, 42);
         position: absolute;
-        top: 100%; /* Näytä valikko headerin alapuolella */
+        top: 100%; 
         left: 0;
-        width: 100%; /* Valikon leveys koko ruudulle */
+        width: 100%; 
         z-index: 10;
         padding: 10px 0;
     }
 
     .menu-checkbox:checked ~ .navigation {
-        display: flex; /* Näytä navigointivalikko, kun checkbox on valittu */
+        display: flex;
     }
 
     .menu-icon {
         display: block; /* Näytä hamburger-ikoni pienillä näytöillä */
     }
 
-
     .navigation ul {
         flex-direction: column;
         align-items: center;
     }
-
 
     .navigation ul li {
         margin: 10px 0;
@@ -591,11 +541,6 @@ form button:hover {
         width: 100%;
         text-align: center;
         padding: 10px 0;
-    }
-
-
-    .main-title {
-        font-size: 2rem;
     }
 
     .content {
@@ -609,58 +554,60 @@ form button:hover {
         gap: 15px;
     }
 
-
-
     .info-grid {
-        grid-template-columns: 1fr;
-        gap: 15px; /* Lisää tilaa elementtien väliin */
-        padding: 0 10px; /* Lisää sisennystä sivun reunoille */
+        grid-template-columns: 1fr; /*asettaa yhteen sarakkeeseen*/
+        gap: 15px; 
+        padding: 0 10px; 
         
     }
 
     .text-box {
         margin: 0 auto;
         padding: 20px;
-        max-width: 100%; /* Skaalaa tekstilohko näyttöön */
-        text-align: center; /* Keskittää tekstin */
+        max-width: 100%; 
+        text-align: center; 
         word-wrap: break-word; /* Estää pitkät sanat rikkomasta layoutia */
-    
     }
 
     .image-box {
-        margin: 0 auto; /* Keskittää kuvan */
+        margin: 0 auto; 
         text-align: center;
-        width: 100%; /* Skaalaa kuvan kontti näyttöön */
+        width: 100%; 
     }
 
     .image-box img {
         width: 90%; /* Skaalaa kuva mobiilissa */
-        height: auto; /* Säilyttää kuvasuhteen */
-        max-width: 100%; /* Varmistaa, että kuva ei ylitä konttia */
-
-
+        height: auto; 
+        max-width: 100%; 
     }
+
     .gallery-link {
         margin: 20px auto;
-        width: 90%; /* Skaalaa linkkiosio mobiiliin */
+        width: 90%; 
     }
 
+    .gallery-grid {
+        flex-direction: column; /* Kuvat allekkain mobiilissa */
+        width: 100%; 
+        margin: 0 auto; 
+        padding: 0 10px; 
+        box-sizing: border-box; /* Estää venymisen reunan yli */
+    }
 
-
-    /* Pienillä näytöillä kuvat menevät päällekkäin */
-     .gallery-grid {
-         flex-direction: column;
-     }
-    
     .gallery-pic {
         justify-content: center;
+        margin: 0 auto; 
+        width: 100%; 
+        max-width: 750px; 
+        padding: 10px 0; 
     }
-
 
     .gallery-pic img {
-        max-width: 100%;
+        width: 100%; 
+        height: auto; 
+        max-width: 100%; 
+        border-radius: 10px; 
     }
-
 
     form {
         grid-template-columns: 1fr;
@@ -678,19 +625,17 @@ form button:hover {
 }
 
 
-
 /* Responsiivisuus mobiililaitteille (puhelimet) */
 @media (max-width: 480px) {
-
     p, label, input, button {
-        font-size: 0.9rem;
+   
     }
     .menu-icon {
-        font-size: 2rem;
+ 
     }
 
     .main-title {
-        font-size: 1.5rem;
+
     }
 
     .services-container {
@@ -706,28 +651,34 @@ form button:hover {
 
     .info-grid {
         grid-template-columns: 1fr; /* Yksi sarake mobiilissa */
-        text-align: center; /* Keskittää tekstisisällön */
+        text-align: center; 
     }
 
     .text-box {
         width: 100%;
-        margin: 0 auto; /* Keskittää tekstilohkon */
-        text-align: center; /* Keskittää tekstin lohkossa */
+        margin: 0 auto; 
+        text-align: center; 
     }
 
     .image-box {
         width: 100%; 
-        margin: 0 auto; /* Keskittää kuvan */
+        margin: 0 auto;
         text-align: center;
     }
 
     .image-box img {
-        width: 100%; /*skaalaa kuvaa mobiilissa, jos se on liian suuri */
+        width: 100%; 
     }
 
-    .gallery-pic {
+    .gallery-grid {
         flex-direction: column;
     }
+   
+   .gallery-pic {
+       justify-content: center;
+       margin: 0 auto;
+       width: 100%;
+   }
 
     .gallery-link .button {
         font-size: 0.9rem;
@@ -740,8 +691,17 @@ form button:hover {
     }
 
     .contact-info, form, .map-container {
+        margin: 0 auto;
         max-width: 100%;
         padding: 10px;
+    }
+
+    .map-container iframe {
+        display: block; 
+        margin: 10px auto;
+        width: 90%; 
+        max-width: 480px; 
+        height: auto; 
     }
 
     .grid-reviews {
