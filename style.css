@@ -654,11 +654,15 @@ form button:hover {
     
     .gallery-pic {
         justify-content: center;
+        margin: 0 auto;
+        width: 100%;
     }
 
 
     .gallery-pic img {
-        max-width: 100%;
+        width: 90%;
+        height: auto; /* Säilyttää kuvasuhteen */
+        max-width: 100%; /* Varmistaa, että kuva ei ylitä konttia */
     }
 
 
@@ -745,6 +749,7 @@ form button:hover {
     }
 
     .map-container iframe {
+        justify-content: center;
         margin: 10px auto;
         width: 70%;
 
