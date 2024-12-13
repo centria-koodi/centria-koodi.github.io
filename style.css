@@ -744,6 +744,12 @@ form button:hover {
         padding: 10px;
     }
 
+    .map-container iframe {
+        margin: 10px auto;
+        width: 70%;
+
+    }
+
     .grid-reviews {
         grid-template-columns: 1fr; /* Yksi sarake pienimmillä näytöillä */
     }
