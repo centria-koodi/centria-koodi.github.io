@@ -1,54 +1,165 @@
-<!--Ilmoitetaan selaimelle tieto dokumentista ja sen kieli - HTML5 tyyliin-->
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <!--Dokumentin nimi ja metatiedot sekä linkitykset .css tiedostoon-->
-    <title>Parhiala Mekanik - Metallityöntekijä/Autonkorjaus</title>
     <meta charset="UTF-8">
-    <meta name="author" content="Markus Parhiala">
-    <meta name="description" content="Parhiala Mekanik yrityksen etusivu - Metallityöntekijä ja autonkorjaus mekanikko">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./media/Logo_icon.png">
-    <link rel ="stylesheet" href="style.css">
+    <title>Parhiala Mekanik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background-color: #1a1a1a;
+        }
+
+        header {
+            background: url('./media/mies-ja-auto.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            font-size: 3rem;
+        }
+
+        header p {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+       
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #services {
+            background: #222;
+        }
+
+        .service {
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #111;
+            color: #777;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        form {
+            display: 'grid';
+            margin: 0 auto;   
+            margin-top: 1rem;
+            max-width: 750px; 
+        }
+
+        input, textarea {
+            width: 80%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 0.5rem 2rem;
+            border: none;
+            background: #00bcd4;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0097a7;
+        }
+    </style>
 </head>
-
-<!--Käyttäjälle näkyvä osio alkaa tästä-->
 <body>
-    <div class="container">
-    <header class="header">
-        <div class="logo">
-            <img src="./media/Logo_Läpinäkyvä_valkoinen_pieni.png" alt="Parhiala Mekanik logo teksti" style="width: 384px; height: 120px;">
+    <header>
+        <div>
+            <h1>Parhiala Mekanik</h1>
+            <p>Paras ratkaisu autokorjaukseen ja metallityöhön</p>
         </div>
-
-        <input type="checkbox" id="menu-toggle" class="menu-checkbox"> <!--Hamburger Menu-->
-        <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">☰</label>
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li><a href="index.html">Etusivu</a></li>
-                    <li><a href="palvelut.html">Palvelut</a></li>
-                    <li><a href="tietoa.html">Tietoa meistä</a></li>
-                    <li><a href="galleria.html">Galleria</a></li>
-                    <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-                    <li><a href="kokemuksia.html">Asiakkaiden kokemuksia</a></li>
-                </ul>
-            </nav>
     </header>
 
-    <main class="content-index">
-        <div class="content-index-wrapper">
-              <div class="content-index-intro">
-                  <h1>Parhiala Mekanik</h1>
-                     <p>Meiltä saat laadukasta palvelua kaikille autoille ja metallityölle. Vahva kokemus ja modernit työkalut takaavat luotettavan ja tehokkaan työn.</p>
-              </div>
-              <div class="content-index-contact">
-                <a href="yhteystiedot.html" class="contact-button">Ota yhteyttä</a>
-              </div>
-        </div>
-    </main>
+    <nav>
+        <a href="#services">Palvelut</a>
+        <a href="#about">Tietoa meistä</a>
+        <a href="#contact">Yhteystiedot</a>
+    </nav>
 
-    <footer class="footer">
-        <p>&copy; 2024 Markus Parhiala, Kaikki oikeudet pidätetään</p>
+    <section id="services">
+        <h2>Palvelut</h2>
+        <div class="service">
+            <h3>Autokorjaus</h3>
+            <p>Huippulaatuista autokorjausta yksityisille ja yrityksille.</p>
+        </div>
+        <div class="service">
+            <h3>Metallityöt</h3>
+            <p>Korkean tarkkuuden metallityöt kaikkiin tarpeisiin.</p>
+        </div>
+        <div class="service">
+            <h3>Alihankinta</h3>
+            <p>Luotettava kumppani yrityksesi projekteihin.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Tietoa meistä</h2>
+        <p>Olemme kokenut yritys, joka tarjoaa laadukasta palvelua yli 10 vuoden kokemuksella. Olen Mika Parhiala, metallityöntekijä ja autonkorjausmekaanikko yli kahden vuosikymmenen kokemuksella. Työni juuret ulottuvat lapsuuteeni, jolloin vietin loputtomia tunteja isäni verstaalla oppien käsittelemään työkaluja ja ymmärtämään, miten koneet toimivat. Jo varhain ymmärsin, että kädentaito ja tekninen osaaminen ovat vahvuuksia, joita haluan kehittää koko elämäni ajan. Olen aina nauttinut haasteista, joita monimutkaiset projektit tuovat mukanaan. Metallityöt vaativat tarkkuutta, suunnitelmallisuutta ja luovuutta, ja näitä piirteitä olen pyrkinyt tuomaan jokaiseen projektiini. Oli kyse sitten mittatilaustyönä valmistettavista koneenosista tai vanhan auton korin entisöinnistä, tavoitteenani on aina tarjota asiakkaalle korkealaatuista työtä, joka kestää aikaa. Autonkorjaus on toinen intohimoni. Näen jokaisen auton yksilönä, ja pyrin ymmärtämään sen tarpeet ennen työn aloittamista. Huollan ja korjaan niin uudemmat kuin vanhemmatkin autot, mutta erityisen lähellä sydäntäni ovat klassikkoautot, joiden entisöinti vaatii sekä teknistä taitoa että historiallista ymmärrystä. Jokainen onnistuneesti palautettu auto on minulle henkilökohtainen voitto.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Yhteystiedot</h2>
+        <p>Ota yhteyttä täyttämällä alla oleva lomake:</p>
+        <form>
+            <input type="text" placeholder="Nimi" required>
+            <input type="email" placeholder="Sähköposti" required>
+            <textarea placeholder="Viesti" rows="4" required></textarea>
+            <div>
+            <button type="submit">Lähetä</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Markus Parhiala, Kaikki oikeudet pidätetään.</p>
     </footer>
-</div>
 </body>
 </html>
+
