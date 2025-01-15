@@ -31,13 +31,11 @@
         header h1 {
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            font-size: 3rem;
         }
 
         header p {
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            font-size: 1.5rem;
         }
        
 
@@ -45,7 +43,7 @@
             position: sticky;
             top: 0;
             background: #333;
-            padding: 1rem;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -53,7 +51,6 @@
             color: #f4f4f4;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 1.2rem;
         }
 
         nav a:hover {
@@ -61,7 +58,7 @@
         }
 
         section {
-            padding: 4rem 2rem;
+            padding: 20px;
             text-align: center;
         }
 
@@ -81,22 +78,25 @@
         }
 
         form {
-            display: 'grid';
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin: 0 auto;   
-            margin-top: 1rem;
-            max-width: 750px; 
+            margin-top: 10px;
+            max-width: 800px; 
         }
 
         input, textarea {
             width: 80%;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
+            padding: 10px;
+            margin: 10px 0;
             border: none;
             border-radius: 5px;
         }
 
         button {
-            padding: 0.5rem 2rem;
+            margin: 10px 0;
             border: none;
             background: #00bcd4;
             color: #fff;
@@ -107,6 +107,16 @@
         button:hover {
             background: #0097a7;
         }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 <body>
@@ -147,15 +157,66 @@
     <section id="contact">
         <h2>Yhteystiedot</h2>
         <p>Ota yhteyttä täyttämällä alla oleva lomake:</p>
-        <form>
-            <input type="text" placeholder="Nimi" required>
-            <input type="email" placeholder="Sähköposti" required>
-            <textarea placeholder="Viesti" rows="4" required></textarea>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Nimi" required>
+            <span id="nameError" class="error"></span>
+   
+            <input type="email" id="email" name="email" placeholder="Sähköposti" required>
+            <span id="emailError" class="error"></span>
+
+            <textarea id="message" name="message" rows="5" placeholder="Viesti" required></textarea>
+            <span id="messageError" class="error"></span>
+
             <div>
             <button type="submit">Lähetä</button>
             </div>
         </form>
+
+        <div id="formFeedback" class="success" style="display: none;">
+            Kiitos viestistäsi! Otamme sinuun yhteyttä pian.
+        </div>
     </section>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Estää lomakkeen oletusarvoisen lähetyksen
+
+            let valid = true;
+
+            // Puhdistetaan mahdolliset aikaisemmat virheilmoitukset
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            // Tarkistetaan kentät
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Nimi on pakollinen.";
+                valid = false;
+            }
+
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Sähköposti on pakollinen.";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailError").textContent = "Anna kelvollinen sähköpostiosoite.";
+                valid = false;
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Viesti on pakollinen.";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("formFeedback").style.display = "block";
+                document.getElementById("contactForm").reset(); // Tyhjennä lomake
+            }
+        });
+    </script>
 
     <footer>
         <p>&copy; 2025 Markus Parhiala, Kaikki oikeudet pidätetään.</p>
